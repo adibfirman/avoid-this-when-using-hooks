@@ -1,6 +1,6 @@
 export { vsDarkFull as theme } from "code-surfer";
 
-import { Appear } from "mdx-deck";
+import { Appear, Image } from "mdx-deck";
 import {
   CodeSurferColumnLayout,
   Step,
@@ -8,7 +8,7 @@ import {
   vsDarkFull as hooksTheme,
 } from "code-surfer";
 
-## Avoid This When Using _Hooks_
+## Avoid These When Using _Hooks_
 
 ### [ReactJS ID](http://reactjs.id) @adibfirman
 
@@ -19,7 +19,7 @@ import {
 <ul>
   <Appear>
     <li>
-      I am
+      I am{" "}
       <a href="https://github.com/adibfirman">
         Adib Firman
       </a>
@@ -39,9 +39,9 @@ import {
 <ul>
   <Appear>
     <li>Basic of React</li>
-    <li>React Lifecycle</li>
     <li>Basic of Hooks</li>
-    <li>HTML...?? 😒</li>
+    <li>Integration testing</li>
+    <li>CSS or HTML...??? 😒</li>
   </Appear>
 </ul>
 
@@ -76,18 +76,103 @@ import {
 
 ---
 
-## Please broo avoid thesee....!! 🙇
+## Please broo avoid these... 😢
 
 ---
 
-<CodeSurferColumnLayout>
-  <Step subtitle="Here is a simple React component">
+## Overthinking about Lifecycles
+
+---
+
+<CodeSurferColumnLayout sizes={[1, 1]}>
+  <Step>
     <Code
+      subtitle="Here is an example of class component"
       lang="jsx"
       code={
         require("!!raw-loader!./src/pitfall-1/script.0.js")
           .default
       }
     />
+    <Code
+      subtitle="Here is an example of functional component"
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-1/script.1.js")
+          .default
+      }
+    />
   </Step>
 </CodeSurferColumnLayout>
+
+---
+
+<CodeSurferColumnLayout>
+  <Step subtitle="Write the lifecycles">
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-1/script.1.js")
+          .default
+      }
+    />
+  </Step>
+  <Step>
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-1/script.2.js")
+          .default
+      }
+    />
+  </Step>
+  <Step>
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-1/script.3.js")
+          .default
+      }
+    />
+  </Step>
+  <Step>
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-1/script.4.js")
+          .default
+      }
+    />
+  </Step>
+  <Step>
+    <Code
+      lang="jsx"
+      focus="4,5,6"
+      code={
+        require("!!raw-loader!./src/pitfall-1/script.5.js")
+          .default
+      }
+    />
+  </Step>
+</CodeSurferColumnLayout>
+
+---
+
+<CodeSurferColumnLayout>
+  <Step subtitle="use _useEffect_ for playing with lifecycles">
+    <Code
+      code={
+        require("!!raw-loader!./src/pitfall-1/script.5.js")
+          .default
+      }
+    />
+  </Step>
+</CodeSurferColumnLayout>
+
+---
+
+## But....!!!
+
+---
+
+## Though like that, that's wrong....!!!
