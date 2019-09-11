@@ -2,8 +2,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "start": "mdx-deck deck.js",
-    "build": "mdx-deck build deck.js",
+    "start": "mdx-deck deck.mdx",
+    "build": "mdx-deck build deck.mdx",
     "test": "echo \"there are no tests\""
   },
   "devDependencies": {
@@ -11,5 +11,5 @@
     "mdx-deck": "2.4.0",
     "raw-loader": "3.0.0"
   },
-  "name": "starter-kit-codesurfer"
+  "name": "react-conf-2018-hooks-demo"
 }
