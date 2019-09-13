@@ -188,3 +188,56 @@ import {
 ## Overthinking about performance
 
 ---
+
+<CodeSurferColumnLayout sizes={[1, 1]}>
+  <Step subtitle="Which of these is better for performance?">
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-2/script.0.js")
+          .default
+      }
+    />
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-2/script.1.js")
+          .default
+      }
+    />
+  </Step>
+</CodeSurferColumnLayout>
+
+---
+
+<CodeSurferColumnLayout>
+  <Step subtitle="some people worry about this component 😵️">
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-2/script.2.js")
+          .default
+      }
+    />
+  </Step>
+  <Step subtitle="1. defined function inside the component">
+    <Code
+      focus="4,5,6"
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-2/script.2.js")
+          .default
+      }
+    />
+  </Step>
+  <Step subtitle="2. defined function as props in the component, it can't be optimized">
+    <Code
+      focus="8"
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-2/script.2.js")
+          .default
+      }
+    />
+  </Step>
+</CodeSurferColumnLayout>
