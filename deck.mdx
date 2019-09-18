@@ -244,4 +244,69 @@ import {
 
 ---
 
-### Avoid ESlint
+## Trying to Avoid ESlint
+
+---
+
+##### When Hooks was released, CRA adding a new rules for hooks
+
+<ul>
+  <Appear>
+    <li>react-hooks/rules-of-hooks</li>
+    <li>react-hooks/exhaustive-deps</li>
+  </Appear>
+</ul>
+
+---
+
+## what's the difference?
+
+---
+
+## react-hooks/rules-of-hooks
+
+<ul>
+  <Appear>
+    <li>Only Call Hooks at the Top Level</li>
+    <li>Only Call Hooks from React Functions</li>
+    <li>
+      so on, you can see all of the rules{" "}
+      <a href="https://reactjs.org/docs/hooks-rules.html">
+        here
+      </a>
+    </li>
+  </Appear>
+</ul>
+
+---
+
+<CodeSurferColumnLayout>
+  <Step subtitle="react-hooks/exhaustive-deps">
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-3/script.0.js")
+          .default
+      }
+    />
+  </Step>
+  <Step subtitle="react-hooks/exhaustive-deps">
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/pitfall-3/script.1.js")
+          .default
+      }
+    />
+  </Step>
+</CodeSurferColumnLayout>
+
+---
+
+## You not trying to read the docs and FAQ about hooks
+
+---
+
+## That's all
+
+### Thank You
