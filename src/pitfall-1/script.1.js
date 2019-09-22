@@ -1,3 +1,5 @@
-function HookComponent() {
-  // and how I'm implement lifecycles in here :(
+class Component extends React.Component {
+  constructor() {
+    // initialize component instance
+  }
 }

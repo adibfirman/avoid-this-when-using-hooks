@@ -1,7 +1,11 @@
-import React from 'react'
-
-function HookComponent() {
-  React.useEffect(() => { ... }, [])
-
-  React.useEffect(() => { ... }, [when, any, ofThese, change])
+class Component extends React.Component {
+  constructor() {
+    // initialize component instance
+  }
+  componentDidMount() {
+    // run this code when the component is first added to the page
+  }
+  componentDidUpdate(prevProps, prevState) {
+    // run this code when the component is updated on the page
+  }
 }
