@@ -266,12 +266,12 @@ import {
 
 <!-- ----------------------------------------- 2. pitfalls--------------------------------------- -->
 
-## Overthinking about performance
+## Abuse the Hooks API
 
 ---
 
 <CodeSurferColumnLayout sizes={[1, 1]}>
-  <Step subtitle="Which of these is better for performance?">
+  <Step subtitle="What's the problem with this code?">
     <Code
       lang="jsx"
       code={
@@ -279,15 +279,45 @@ import {
           .default
       }
     />
+  </Step>
+  <Step subtitle="This the problem...!!">
     <Code
+      focus="5,6,7"
       lang="jsx"
       code={
-        require("!!raw-loader!./src/pitfall-2/script.1.js")
+        require("!!raw-loader!./src/pitfall-2/script.0.js")
           .default
       }
     />
   </Step>
 </CodeSurferColumnLayout>
+
+---
+
+## The explanation
+
+<ul>
+  <Appear>
+    <li>
+      call a useCallback which <br />
+      itself is setting running through <br />
+      logical expressions etc.
+    </li>
+    <li>
+      not get a garbage collection on the second render
+    </li>
+    <li>a function doing more work :(</li>
+  </Appear>
+</ul>
+
+---
+
+> identify your function first, and then you will know it's needed or not :)
+> -- [@adibfirman](https://twitter.com/dibfirman)
+
+---
+
+## Problematic with inline function
 
 ---
 
@@ -322,6 +352,16 @@ import {
     />
   </Step>
 </CodeSurferColumnLayout>
+
+---
+
+## Stop worrying about those
+
+<ul>
+  <Appear>
+    <li>pertama</li>
+  </Appear>
+</ul>
 
 ---
 
