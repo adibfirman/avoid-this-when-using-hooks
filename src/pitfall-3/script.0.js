@@ -4,7 +4,7 @@ function Component({ myNameId }) {
   // imagine you also have loading/error states. omitting to save space...
 
   useEffect(() => {
-    getMyName(myId).then(res => setName(res));
+    getMyName(myNameId).then(res => setName(res));
   }, []); // 😱️
 
   return <div>{/* render the my name here */}</div>;
