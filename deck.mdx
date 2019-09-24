@@ -280,7 +280,7 @@ import {
       }
     />
   </Step>
-  <Step subtitle="This the problem...!!">
+  <Step subtitle="This is the problem...!!">
     <Code
       focus="5,6,7"
       lang="jsx"
@@ -364,7 +364,7 @@ import {
 
 ---
 
-### fot the second point...
+### for the second point...
 
 > Don't thinking <br/>
 > _"inline functions can be problematic for performance"_ <br/>
@@ -376,7 +376,21 @@ import {
 
 <!-- --------------------------------------------------------------------------------- next ------------------------------------------- -->
 
-## Rules are made to be broken :)
+## Rules are made to be broken 😎️
+
+---
+
+<CodeSurferColumnLayout>
+  <Step>
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/script.0.js")
+          .default
+      }
+    />
+  </Step>
+</CodeSurferColumnLayout>
 
 ---
 
@@ -396,21 +410,127 @@ import {
 ---
 
 ## react-hooks/rules-of-hooks
-
-<ul>
-  <Appear>
-    <li>Only Call Hooks at the Top Level</li>
-    <li>Only Call Hooks from React Functions</li>
-    <li>
-      <a>s.id/rules-of-hooks</a>
-    </li>
-  </Appear>
-</ul>
+> 1. Only Call Hooks at the Top Level
 
 ---
 
 <CodeSurferColumnLayout>
-  <Step subtitle="react-hooks/exhaustive-deps">
+  <Step>
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/script.1.js")
+          .default
+      }
+    />
+  </Step>
+</CodeSurferColumnLayout>
+
+---
+
+> So how does React know which state to call?<br/>
+> like _useState_ and so on
+
+---
+
+> The answer is.....<br/>
+> that **_React relies on the order in which Hooks are called_**
+
+---
+
+<CodeSurferColumnLayout>
+  <Step>
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/script.2.js")
+          .default
+      }
+    />
+  </Step>
+  <Step>
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/script.3.js")
+          .default
+      }
+    />
+  </Step>
+</CodeSurferColumnLayout>
+
+---
+
+> But what happens if we calls hooks inside the condition?
+
+---
+
+<CodeSurferColumnLayout>
+  <Step subtitle="like this?">
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/script.4.js")
+          .default
+      }
+    />
+  </Step>
+</CodeSurferColumnLayout>
+
+---
+
+> Let's look behind the scenes..!!
+
+---
+
+<CodeSurferColumnLayout>
+  <Step>
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/script.5.js")
+          .default
+      }
+    />
+  </Step>
+  <Step>
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/script.6.js")
+          .default
+      }
+    />
+  </Step>
+  <Step>
+    <Code
+      lang="jsx"
+      code={
+        require("!!raw-loader!./src/script.7.js")
+          .default
+      }
+    />
+  </Step>
+</CodeSurferColumnLayout>
+
+---
+
+> This is why Hooks must be called on the top level of our components -- [@reactjs.org]()
+
+---
+
+## react-hooks/rules-of-hooks
+> <del>1. Only Call Hooks at the Top Level</del><br/>
+> 2. Only Call Hooks from React Functions
+
+---
+
+## react-hooks/exhaustive-deps
+
+---
+
+<CodeSurferColumnLayout>
+  <Step>
     <Code
       lang="jsx"
       code={
@@ -419,7 +539,7 @@ import {
       }
     />
   </Step>
-  <Step subtitle="react-hooks/exhaustive-deps">
+  <Step>
     <Code
       lang="jsx"
       code={
@@ -429,6 +549,11 @@ import {
     />
   </Step>
 </CodeSurferColumnLayout>
+
+---
+
+> Install and Follow the Eslint Rules <br/>
+> [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
 ---
 
