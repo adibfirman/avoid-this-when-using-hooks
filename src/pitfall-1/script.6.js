@@ -1,3 +1,3 @@
 function HookComponent() {
-  // write my component :(
+  // write my lifecycle too :(
 }
